@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    letter-spacing: 1px;
+}
+
+.main_outer{
+    overflow: hidden;
+}
+
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.overflow_handle{
+    overflow-x: hidden;
+}
+
+.outer{
+    display: flex;
+    box-shadow: 10px 10px 16px #888888;
+    min-width: 50%;
+    min-height: 80vh;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.view{
+    background-color: lightblue;
+}
+
+.task_div{
+    box-shadow: 2px 5px 10px 6px #888888;
+    width: 50vw;
+}
+
+.profile_div{
+    box-shadow: 2px 5px 10px 6px #888888;
+    width: 60vw;
+}
+
+.highlight{
+    box-shadow: 2px 5px 10px 6px #888888;
+}
+
+.userImg{
+    background-color: lightgrey;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.input_tag{
+    box-shadow: none !important;
+}
+
+.message_div{
+    box-shadow: 2px 7px 15px 6px #888888;
+}
+
+/* ERROR PAGE */
+.errorLogo{
+    font-size: 15rem;
+    opacity: 0.1;
+    position: absolute;
+    bottom: 10rem;
+    left: 34rem;
+}
+
+.redirect{
+    color: #008ae6;
+    text-align: center;
+}
+
+.error_message{
+    position: relative;
+    top: 40vh;
+}
+
+/* HOMEPAGE */
+.home_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15vh;
+}
+
+.home_options{
+    display: flex;
+    gap: 15px;
+}
+
+.home_link{
+    position: relative;
+    top: 42vh;
+    left: 13vw;
+}
+
+/* RESPONSIVE */
+@media (max-width: 400px) {
+
+    .outer {
+        flex-direction: column;
+        min-height: max-content;
+        min-width: 95vw;
+    }
+
+    .task_div {
+        width: 90vw;
+    }
+
+    /* PROFILE PAGE */
+    .userImg {
+        width: 200%;
+    }
+
+    /* HOMEPAGE */
+    .home_wrapper {
+        text-align: center;
+        margin: 50px;
+    }
+
+    /* ERROR PAGE */
+    .errorLogo{
+        font-size: 10rem;
+        opacity: 0.1;
+        position: absolute;
+        bottom: 25rem;
+        left: 3rem;
+    }
+
+    .redirect{
+        color: #008ae6;
+        text-align: center;
+    }
+
+    .error_message{
+        position: relative;
+        top: 28vh;
+    }
+
+    .home_link {
+        left: 7rem;
+        top: 15rem;
+    }
+}
