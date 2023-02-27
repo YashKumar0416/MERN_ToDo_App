@@ -1,7 +1,5 @@
-const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-dotenv.config({path: './config.env'})
-const DB = process.env.DATABASE;
+const DB = process.env.DATABASE || "mongodb://localhost/ToDo_App";
 
 const mongoDB = async ()=> {
     mongoose.connect(DB,async (err, result)=> {
