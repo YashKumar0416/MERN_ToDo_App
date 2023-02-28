@@ -23,10 +23,7 @@ const Login = () => {
 
     const res = await fetch(`${process.env.REACT_APP_URL}/login`, {
       method:"POST",
-      mode: "cors",
-      credentials: "include",
       headers: {
-        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
