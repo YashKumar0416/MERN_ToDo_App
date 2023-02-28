@@ -55,10 +55,8 @@ const Profile = () => {
 
     if(res.status === 400 || !data) {
       window.alert("Profile Update Failed")
-      console.log("Profile Update Failed")
     } else {
       window.alert("Profile Updated Successfully")
-      console.log("Profile Updated Successfully")
       setEdit(false)
       getData();
     }
