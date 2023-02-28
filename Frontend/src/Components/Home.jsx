@@ -41,13 +41,9 @@ const Home = () => {
         try {
             const res = await fetch(`${process.env.REACT_APP_URL}/addtask`,{
                 method: "POST",
-                mode: 'cors',
                 headers: {
-                    "Access-Control-Allow-Origin": "*",
-                    "Accept" : "application.json",
                     "Content-Type": "application/json"
                 },
-                credentials: 'include',
                 body: JSON.stringify({
                   email: localStorage.getItem("email"),
                   task: task
@@ -74,13 +70,9 @@ const Home = () => {
       try {
         const res = await fetch(`${process.env.REACT_APP_URL}/deletetask`, {
           method: "POST",
-          mode: 'cors',
           headers: {
-              "Access-Control-Allow-Origin": "*",
-              "Accept" : "application.json",
               "Content-Type": "application/json"
           },
-          credentials: 'include',
           body: JSON.stringify({
             email: localStorage.getItem("email"),
             id: id
@@ -105,12 +97,9 @@ const Home = () => {
       try {
         const res = await fetch(`${process.env.REACT_APP_URL}/updatetask`, {
           method: "POST",
-          mode: 'cors',
           headers: {
-              "Access-Control-Allow-Origin": "*",
               "Content-Type": "application/json"
           },
-          credentials: 'include',
           body: JSON.stringify({
             id: id,
             email: localStorage.getItem("email"),
