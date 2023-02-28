@@ -5,6 +5,9 @@ require('./db/db');
 const User = require('./Model/User');
 const PORT = process.env.PORT || 8000;
 
+app.get('/try', (req, res)=> {
+res.send("Try Successfull")})
+
 app.use(cors())
 app.use(express.json())
 app.use(require('./Router/routes'))
