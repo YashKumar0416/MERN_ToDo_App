@@ -4,12 +4,13 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { BiTask } from "react-icons/bi";
 
 const NavbarHeader = () => {
 
-    const {state, dispatch} = useContext(UserContext)
+    const {state, dispatch} = useContext(UserContext);
+    const navigate = useNavigate();
 
     // LOGOUT USER
     const logout = ()=> {
